@@ -1,0 +1,33 @@
+{
+  "title": "CunYu",
+  "author": "CunYu",
+  "description": "村雨个人学习笔记",
+  "language": "zh-hans",
+  "plugins": [
+    "splitter",
+    "back-to-top-button",
+    "expandable-chapters-small",
+    "copy-code-button",
+    "-sharing",
+    "sharing-plus",
+    "popup",
+    "github",
+    "insert-logo"
+  ],
+  "pluginsConfig": {
+    "sharing": {
+      "douban": true,
+      "linkedin": true,
+      "qq": true,
+      "qzone": true,
+      "weibo": true
+    },
+    "github": {
+      "url": "https://github.com/CunYu/study-note"
+    },
+    "insert-logo": {
+      "url": "/村雨.jpg",
+      "style": "background: none; max-height: 60px; min-height: 60px"
+    }
+  }
+}
