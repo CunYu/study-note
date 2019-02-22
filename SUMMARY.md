@@ -15,6 +15,7 @@
     * [Java-注解简介](Java/Java-注解简介.md)
     * [Java-装箱拆箱](Java/Java-装箱拆箱.md)
     * [Java-多线程基础](Java/Java-多线程基础.md)
+    * [Java-线程间通信](Java/Java-线程间通信.md)
 * [Java工具包](Java工具包/POI-读写Excel-简介.md)
     * [POI-读写Excel-简介](Java工具包/POI-读写Excel-简介.md)
 * [JVM](JVM/JVM-介绍.md)
