@@ -36,9 +36,11 @@ synchronized锁是可重入锁，自己可以再次获取自己已获得还未�
 
 ### 等待/通知机制
 
-notify，notifyAll，wait。
+wait，notify，notifyAll。
 
 wait方法会释放锁，而notify方法不会释放锁。
+
+wait，notify，notifyAll只能在同步代码块中使用。
 
 ```
 public class Wait implements Runnable {
@@ -267,6 +269,7 @@ public class Job implements Runnable {
         int randomNum = (int) (Math.random() * 1000);
         threadLocal.set(1 + randomNum);
         System.out.println("i初始值为1，随机数为" + randomNum + "，结束值为" + threadLocal.get().toString());
+        // 避免内存泄漏
         threadLocal.remove();
     }
 }
