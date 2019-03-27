@@ -25,6 +25,8 @@
     * [RabbitMQ-简介](RabbitMQ/RabbitMQ-简介.md)
 * [Redis](Redis/Redis-简介.md)
     * [Redis-简介](Redis/Redis-简介.md)
+* [Zookeeper](Zookeeper/Zookeeper基本知识.md)
+    * [Zookeeper基本知识](Zookeeper/Zookeeper基本知识.md)
 * [Spring](Spring/Spring-AOP介绍.md)
     * [Spring-AOP介绍](Spring/Spring-AOP介绍.md)
     * [Spring-Bean管理](Spring/Spring-Bean管理.md)
