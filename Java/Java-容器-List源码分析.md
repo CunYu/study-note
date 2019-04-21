@@ -95,7 +95,7 @@ private static final int MAX_ARRAY_SIZE = Integer.MAX_VALUE - 8;
 
 每当往ArrayList添加元素时，其会判断数组当前容量是否可以存储下，如果存储不下则对数组进行扩容，扩容后将原数组复制到扩容后的新数组中，然后将添加的元素添加到新数组中。
 
-ArrayList受数组影响，长度有最大限制。
+ArrayList受int影响，长度有最大限制。
 
 * ArrayList获取元素部分源码
 
@@ -254,7 +254,7 @@ protected int elementCount;
 
 每当往Vector添加元素时，其会判断数组当前容量是否可以存储下，如果存储不下则对数组进行扩容，扩容后将原数组复制到扩容后的新数组中，然后将添加的元素添加到新数组中。
 
-Vector受数组影响，长度有最大限制。
+Vector受int影响，长度有最大限制。
 
 * Vector获取元素部分源码
 
