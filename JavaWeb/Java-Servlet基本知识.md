@@ -88,7 +88,7 @@ GET传输的数据存放在URL中，POST的数据存放在请求头或请求数�
 
 GET传输的数据受URL最大长度影响（2048个字符），GET使用MIME类型（application/x-www-form-urlencoded）的URL编码（百分号编码）。
 
-### Servlet项目
+### Servlet Demo
 
 * servlet-demo项目结构
 
