@@ -176,7 +176,7 @@ tasks.withType(JavaCompile) {
 }
 ```
 
-通过tomcat启动，访问http://localhost:8080/servlet-demo/demo
+通过tomcat启动，浏览器访问 http://localhost:8080/servlet-demo/demo
 
 * 网页显示
 

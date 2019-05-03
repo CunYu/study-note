@@ -70,24 +70,6 @@ GenericServlet类是实现了Servlet的抽象类，在Servlet的基础上提供�
 
 GenericServlet类是继承了GenericServlet的抽象类，在GenericServlet的基础上进一步封装。
 
-### 转发和重定向
-
-转发是服务端内部的行为，重定向是客户端行为。
-
-转发是服务端内部的跳转，客户端不会有感知。
-
-重定向是客户端行为，客户端发送请求后，服务端会返回相应的状态码（301，302）并告知相关URL，客户端会发起新的请求。
-
-转发可以隐藏内部细节，根据传参的不同，服务端内部跳转到相应的模块，重定向一般用于注销完毕后的跳转。
-
-### GET和POST
-
-GET是从服务端获取资源，POST是向服务端提交数据。
-
-GET传输的数据存放在URL中，POST的数据存放在请求头或请求数据中。
-
-GET传输的数据受URL最大长度影响（2048个字符），GET使用MIME类型（application/x-www-form-urlencoded）的URL编码（百分号编码）。
-
 ### Servlet Demo
 
 * servlet-demo项目结构
@@ -152,7 +134,7 @@ dependencies {
 }
 ```
 
-通过tomcat启动，访问http://localhost:8080/servlet-demo/demo?display=hello%20world!
+通过tomcat启动，浏览器访问 http://localhost:8080/servlet-demo/demo?display=hello%20world!
 
 * 网页显示
 
