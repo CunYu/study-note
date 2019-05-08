@@ -60,13 +60,13 @@ Spring AOP中使用动态代理和cglib代理分别代理接口和类。
 
 ##### 依赖
 
-```
+``` groovy
 compile('org.springframework.boot:spring-boot-starter-aop')
 ```
 
 ##### 切点表达式
 
-```
+``` text
 execution(* xxx.Xxx.xxx(..))
 ```
 
@@ -76,13 +76,13 @@ execution(* xxx.Xxx.xxx(..))
 
 * ()里面代表方法的参数，（..）表示方法参数随意，也就是匹配该类所有方法名符合的方法。
 
-```
+``` text
 within(xxx.*)
 ```
 
 * 该表达式的精度为类，表示需在参数所指定的类中。
 
-```
+``` text
 bean('xxx')
 ```
 
@@ -102,14 +102,14 @@ bean('xxx')
 
 ###### Lamp接口及其实现类
 
-```
+``` java
 public interface Lamp {
 
     void shine();
 }
 ```
 
-```
+``` java
 public class RedLamp implements Lamp {
 	
     @Override
@@ -121,7 +121,7 @@ public class RedLamp implements Lamp {
 
 ###### 定义切面
 
-```
+``` java
 @Aspect
 public class Book {
 
@@ -141,7 +141,7 @@ public class Book {
 
 如不开启切面，Book就是一个普通的bean。
 
-```
+``` java
 @Configuration
 @EnableAspectJAutoProxy
 public class Config {
@@ -160,7 +160,7 @@ public class Config {
 
 ###### 演示
 
-```
+``` java
 @Controller
 @RequestMapping(value = "/demo")
 public class Demo {
@@ -178,7 +178,7 @@ public class Demo {
 
 ###### 输出
 
-```
+``` text
 开始记录
 发出红光
 记录完成
@@ -188,7 +188,7 @@ public class Demo {
 
 切面可以将切点表达式提取出来
 
-```
+``` java
 @Aspect
 public class Book {
 
@@ -211,7 +211,7 @@ public class Book {
 
 也可以使用环绕通知
 
-```
+``` java
 @Aspect
 public class Book {
 
@@ -240,14 +240,14 @@ public class Book {
 
 ###### Lamp接口及其实现类
 
-```
+``` java
 public interface Lamp {
 
     void shine(int minute);
 }
 ```
 
-```
+``` java
 public class RedLamp implements Lamp {
 	
     @Override
@@ -259,7 +259,7 @@ public class RedLamp implements Lamp {
 
 ###### 定义切面
 
-```
+``` java
 @Aspect
 public class Book {
 
@@ -284,7 +284,7 @@ public class Book {
 
 ###### 开启切面
 
-```
+``` java
 @Configuration
 @EnableAspectJAutoProxy
 public class Config {
@@ -303,7 +303,7 @@ public class Config {
 
 ###### 演示
 
-```
+``` java
 @Controller
 @RequestMapping(value = "/demo")
 public class Demo {
@@ -321,7 +321,7 @@ public class Demo {
 
 ###### 输出
 
-```
+``` text
 开始记录，持续5分钟
 发出红光5分钟
 记录完成
@@ -333,14 +333,14 @@ public class Demo {
 
 ###### Lamp接口及其实现类
 
-```
+``` java
 public interface Lamp {
 
     void shine(int minute);
 }
 ```
 
-```
+``` java
 public class RedLamp implements Lamp {
 
     @Override
@@ -352,7 +352,7 @@ public class RedLamp implements Lamp {
 
 ###### Book接口及其实现类
 
-```
+``` java
 public interface Book {
 
     void startRecord(int minute);
@@ -361,7 +361,7 @@ public interface Book {
 }
 ```
 
-```
+``` java
 public class LampBook implements Book {
 
     public void startRecord(int minute) {
@@ -376,7 +376,7 @@ public class LampBook implements Book {
 
 ###### 定义切面
 
-```
+``` java
 @Aspect
 public class BookIntroducer {
 
@@ -389,7 +389,7 @@ value也可以用+号表示统配所有该类型的，例如value = "demo.Lamp+"
 
 ###### 开启切面
 
-```
+``` java
 @Configuration
 @EnableAspectJAutoProxy
 @ComponentScan
@@ -415,7 +415,7 @@ public class Config {
 
 ###### 演示
 
-```
+``` java
 @Controller
 @RequestMapping(value = "/demo")
 public class Demo implements ApplicationContextAware {
@@ -442,7 +442,7 @@ public class Demo implements ApplicationContextAware {
 
 ###### 输出
 
-```
+``` text
 开始记录，持续5分钟
 发出红光5分钟
 记录完成
@@ -454,14 +454,14 @@ public class Demo implements ApplicationContextAware {
 
 ###### Lamp接口及其实现类
 
-```
+``` java
 public interface Lamp {
 
     void shine();
 }
 ```
 
-```
+``` java
 public class RedLamp implements Lamp {
 
     @Override
@@ -473,7 +473,7 @@ public class RedLamp implements Lamp {
 
 ###### 切面Bean
 
-```
+``` java
 public class Book {
 
     public void startRecord() {
@@ -488,7 +488,7 @@ public class Book {
 
 ###### xml配置
 
-```
+``` xml
 <bean id="redLamp" class="demo.RedLamp"/>
 <bean id="book" class="demo.Book"/>
 
@@ -505,11 +505,11 @@ public class Book {
 
 启动类需引入XML配置
 
-```
+``` java
 @ImportResource("classpath:application-context.xml")
 ```
 
-```
+``` java
 @Controller
 @RequestMapping(value = "/demo")
 public class Demo {
@@ -527,7 +527,7 @@ public class Demo {
 
 ###### 输出
 
-```
+``` text
 开始记录
 发出红光
 记录完成
@@ -537,7 +537,7 @@ public class Demo {
 
 配置可以将切点表达式提取出来
 
-```
+``` xml
 <bean id="redLamp" class="demo.RedLamp"/>
 <bean id="book" class="demo.Book"/>
 
@@ -555,7 +555,7 @@ public class Demo {
 
 也可以使用环绕通知
 
-```
+``` java
 public class Book {
 
     public void aroundRecord(ProceedingJoinPoint proceedingJoinPoint) {
@@ -571,7 +571,7 @@ public class Book {
 }
 ```
 
-```
+``` xml
 <bean id="redLamp" class="demo.RedLamp"/>
 <bean id="book" class="demo.Book"/>
 
@@ -592,14 +592,14 @@ public class Book {
 
 ###### Lamp接口及其实现类
 
-```
+``` java
 public interface Lamp {
 
     void shine(int minute);
 }
 ```
 
-```
+``` java
 public class RedLamp implements Lamp {
 
     @Override
@@ -611,7 +611,7 @@ public class RedLamp implements Lamp {
 
 ###### 切面Bean
 
-```
+``` java
 public class Book {
 
     public void aroundRecord(ProceedingJoinPoint proceedingJoinPoint, int minute) {
@@ -629,7 +629,7 @@ public class Book {
 
 ###### xml配置
 
-```
+``` xml
 <bean id="redLamp" class="demo.RedLamp"/>
 <bean id="book" class="demo.Book"/>
 
@@ -648,11 +648,11 @@ public class Book {
 
 启动类需引入XML配置
 
-```
+``` java
 @ImportResource("classpath:application-context.xml")
 ```
 
-```
+``` java
 @Controller
 @RequestMapping(value = "/demo")
 public class Demo {
@@ -670,7 +670,7 @@ public class Demo {
 
 ###### 输出
 
-```
+``` text
 开始记录，持续5分钟
 发出红光5分钟
 记录完成
@@ -682,14 +682,14 @@ public class Demo {
 
 ###### Lamp接口及其实现类
 
-```
+``` java
 public interface Lamp {
 
     void shine(int minute);
 }
 ```
 
-```
+``` java
 public class RedLamp implements Lamp {
 
     @Override
@@ -701,7 +701,7 @@ public class RedLamp implements Lamp {
 
 ###### Book接口及其实现类
 
-```
+``` java
 public interface Book {
 
     void startRecord(int minute);
@@ -710,7 +710,7 @@ public interface Book {
 }
 ```
 
-```
+``` java
 public class LampBook implements Book {
 
     public void startRecord(int minute) {
@@ -725,7 +725,7 @@ public class LampBook implements Book {
 
 ###### xml配置
 
-```
+``` xml
 <bean id="redLamp" class="demo.RedLamp"/>
 <bean id="lampBook" class="demo.LampBook"/>
 
@@ -741,11 +741,11 @@ public class LampBook implements Book {
 
 启动类需引入XML配置
 
-```
+``` java
 @ImportResource("classpath:application-context.xml")
 ```
 
-```
+``` java
 @Controller
 @RequestMapping(value = "/demo")
 public class Demo implements ApplicationContextAware {
@@ -772,7 +772,7 @@ public class Demo implements ApplicationContextAware {
 
 ###### 输出
 
-```
+``` text
 开始记录，持续5分钟
 发出红光5分钟
 记录完成

@@ -2,14 +2,14 @@
 
 ### 列出root下所有znode
 
-``` bash
+``` shell
 [zk: zookeeper(CONNECTED) 0] ls /
 [zookeeper]
 ```
 
 ### 创建znode
 
-``` bash
+``` shell
 [zk: zookeeper(CONNECTED) 1] create /demo ""
 Created /demo
 [zk: zookeeper(CONNECTED) 2] ls /
@@ -18,7 +18,7 @@ Created /demo
 
 ### 删除znode
 
-``` bash
+``` shell
 [zk: zookeeper(CONNECTED) 3] delete /demo
 [zk: zookeeper(CONNECTED) 4] ls /
 [zookeeper]
@@ -26,7 +26,7 @@ Created /demo
 
 ### 查看znode
 
-``` bash
+``` shell
 [zk: zookeeper(CONNECTED) 5] get /zookeeper
 
 cZxid = 0x0
@@ -44,7 +44,7 @@ numChildren = 1
 
 ### 创建临时znode
 
-``` bash
+``` shell
 [zk: zookeeper(CONNECTED) 6] create -e /temp "temp"
 Created /temp
 [zk: zookeeper(CONNECTED) 7] ls /
@@ -53,7 +53,7 @@ Created /temp
 
 ### 设置监视点
 
-``` bash
+``` shell
 [zk: zookeeper(CONNECTED) 8] stat /temp true
 cZxid = 0x11
 ctime = Sat Apr 13 03:45:42 GMT 2019
@@ -75,7 +75,7 @@ WatchedEvent state:SyncConnected type:NodeDeleted path:/temp
 
 ### 更改znode内容
 
-``` bash
+``` shell
 [zk: zookeeper(CONNECTED) 13] create /demo ""
 Created /demo
 [zk: zookeeper(CONNECTED) 14] set /demo "demo"
@@ -106,7 +106,7 @@ dataLength = 4
 
 ### 监视znode的子znode/创建有序znode
 
-``` bash
+``` shell
 [zk: zookeeper(CONNECTED) 16] ls /demo true
 []
 [zk: zookeeper(CONNECTED) 17] create -s /demo/demo "demo"

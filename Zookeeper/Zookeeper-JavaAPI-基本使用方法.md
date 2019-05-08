@@ -6,7 +6,7 @@ Zookeeper客户端和Zookeeper服务端之间的通信需要建立在会话的�
 
 ### 依赖
 
-```
+``` groovy
 compile("org.apache.zookeeper:zookeeper:3.4.14")
 ```
 
@@ -14,7 +14,7 @@ compile("org.apache.zookeeper:zookeeper:3.4.14")
 
 Watch定义了Zookeeper中用于接收Zookeeper会话事件的对象的类型，Watch是一个接口，每当有Zookeeper会话事件发生时，会调用Watch的process方法。
 
-```
+``` java
 public class DemoWatcher implements Watcher {
 
     @Override
@@ -28,7 +28,7 @@ public class DemoWatcher implements Watcher {
 
 * 同步基本操作
 
-```
+``` java
 ZooKeeper zookeeper = new ZooKeeper("192.168.99.100:2181,192.168.99.100:2182,192.168.99.100:2183", 1000000, new DemoWatcher());
 // 创建临时节点
 zookeeper.create("/demo", "demo".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL);
@@ -63,7 +63,7 @@ zookeeper.close();
 
 * 输出
 
-```
+``` text
 WatchedEvent state:SyncConnected type:None path:null
 demo
 17179869228,17179869228,1555169733644,1555169733644,0,0,0,216172785363845125,4,0,17179869228
