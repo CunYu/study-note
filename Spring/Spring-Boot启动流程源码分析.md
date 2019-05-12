@@ -21,7 +21,7 @@ Spring boot启动主要分为俩部分：@SpringBootApplication和SpringApplicat
 
 * @SpringBootApplication 相关源码
 
-```
+``` java
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented

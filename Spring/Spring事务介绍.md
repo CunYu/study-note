@@ -1,4 +1,4 @@
-本文介绍了Spring 事务的相关知识。内容仅供参考使用，有不足之处请及时指出，也欢迎大家交流探讨。
+本文介绍了Spring事务的相关知识。内容仅供参考使用，有不足之处请及时指出，也欢迎大家交流探讨。
 
 ### 事务概述
 
@@ -94,7 +94,7 @@ PS
 
 依赖包
 
-```
+``` groovy
 compile('org.springframework.boot:spring-boot-starter-web')
 compile('org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.2')
 compile('com.alibaba:druid:1.1.10')
@@ -103,7 +103,7 @@ compile('mysql:mysql-connector-java:8.0.12')
 
 application.yml
 
-```
+``` yml
 spring:
     datasource:
         url: jdbc:mysql://192.168.99.100:3306/demo?useSSL=false&allowPublicKeyRetrieval=true
@@ -125,7 +125,7 @@ transactionTemplate:
 
 applicationContext.xml
 
-```
+``` xml
 <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
     <property name="dataSource" ref="dataSource"/>
 </bean>
@@ -150,14 +150,14 @@ applicationContext.xml
 
 springboot启动类
 
-```
+``` java
 @ImportResource("classpath:applicationContext.xml")
 @MapperScan("xxx.xxx.xxxxx.mapper")
 ```
 
 使用事务代码
 
-```
+``` java
 @Autowired
 private TransactionTemplate transactionTemplate;
 
@@ -192,7 +192,7 @@ public void tracsactionTest() {
 
 依赖包
 
-```
+``` groovy
 compile('org.springframework.boot:spring-boot-starter-web')
 compile('org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.2')
 compile('com.alibaba:druid:1.1.10')
@@ -201,7 +201,7 @@ compile('mysql:mysql-connector-java:8.0.12')
 
 application.yml
 
-```
+``` yml
 spring:
     datasource:
         url: jdbc:mysql://192.168.99.100:3306/demo?useSSL=false&allowPublicKeyRetrieval=true
@@ -218,7 +218,7 @@ mybatis:
 
 applicationContext.xml
 
-```
+``` xml
 <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
     <property name="dataSource" ref="dataSource"/>
 </bean>
@@ -236,14 +236,14 @@ applicationContext.xml
 
 springboot启动类
 
-```
+``` java
 @ImportResource("classpath:applicationContext.xml")
 @MapperScan("xxx.xxx.xxxxx.mapper")
 ```
 
 使用事务代码
 
-```
+``` java
 @Autowired
 private PlatformTransactionManager platformTransactionManager;
 
@@ -272,7 +272,7 @@ public void tracsactionTest() {
 
 依赖包
 
-```
+``` groovy
 compile('org.springframework.boot:spring-boot-starter-web')
 compile('org.springframework.boot:spring-boot-starter-aop')
 compile('org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.2')
@@ -282,7 +282,7 @@ compile('mysql:mysql-connector-java:8.0.12')
 
 application.yml
 
-```
+``` yml
 spring:
     datasource:
         url: jdbc:mysql://192.168.99.100:3306/demo?useSSL=false&allowPublicKeyRetrieval=true
@@ -299,7 +299,7 @@ mybatis:
 
 applicationContext.xml
 
-```
+``` xml
 <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
     <property name="dataSource" ref="dataSource"/>
 </bean>
@@ -329,7 +329,7 @@ applicationContext.xml
 
 springboot启动类
 
-```
+``` java
 @ImportResource("classpath:applicationContext.xml")
 @MapperScan("xxx.xxx.xxxxx.mapper")
 ```
@@ -340,7 +340,7 @@ springboot启动类
 
 依赖包
 
-```
+``` groovy
 compile('org.springframework.boot:spring-boot-starter-web')
 compile('org.springframework.boot:spring-boot-starter-aop')
 compile('org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.2')
@@ -350,7 +350,7 @@ compile('mysql:mysql-connector-java:8.0.12')
 
 application.yml
 
-```
+``` yml
 spring:
     datasource:
         url: jdbc:mysql://192.168.99.100:3306/demo?useSSL=false&allowPublicKeyRetrieval=true
@@ -367,7 +367,7 @@ mybatis:
 
 applicationContext.xml
 
-```
+``` xml
 <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
     <property name="dataSource" ref="dataSource"/>
 </bean>
@@ -387,13 +387,13 @@ applicationContext.xml
 
 springboot启动类
 
-```
+``` java
 @ImportResource("classpath:applicationContext.xml")
 @MapperScan("xxx.xxx.xxxxx.mapper")
 ```
 
 事务注解
 
-```
+``` java
 @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.SERIALIZABLE, timeout = 60)
 ```
