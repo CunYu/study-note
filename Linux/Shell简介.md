@@ -130,7 +130,7 @@ alias rm='rm -i'
 [root@8091b99b9eb0 /]# unalias demo
 ```
 
-上述别名只是在当前shell环境中生效，要想永久生效，需配置在用户家目录中的.bashrc文件。
+上述别名只是在当前shell中生效，要想永久生效，需配置在用户家目录中的.bashrc文件。
 
 * cd
 
