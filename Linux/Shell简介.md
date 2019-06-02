@@ -27,7 +27,7 @@ Linux Shell版本比较多，以下为比较知名的Shell版本。
 
 * 脚本模式
 
-编写Shell脚本，通过Shell脚本运行程序。
+编写Shell脚本，运行Shell脚本。
 
 ### 编写Shell脚本
 
