@@ -45,6 +45,7 @@
     * [Linux例行任务管理](Linux/Linux例行任务管理.md)
     * [Shell简介](Linux/Shell简介.md)
     * [Shell编程-变量](Linux/Shell编程-变量.md)
+    * [Shell编程-转义和引用](Linux/Shell编程-转义和引用.md)
 * [计算机相关](计算机相关/计算机组成基本知识.md)
     * [计算机组成基本知识](计算机相关/计算机组成基本知识.md)
     * [计算机数据表示](计算机相关/计算机数据表示.md)

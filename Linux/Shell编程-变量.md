@@ -200,26 +200,3 @@ echo ${array_2[*]}
 2 3
 
 ```
-
-##### 获取命令输出结果
-
-即使命令输出结果是多行的，变量获取到值也是一行的。
-
-``` shell
-#!/bin/bash
-
-date_1=`date +"%Y%m%d"`
-echo ${date_1}
-
-date_2=$(date +"%Y%m%d")
-echo ${date_2}
-
-info=`finger root`
-echo ${info}
-```
-
-``` text
-20190602
-20190602
-Login: root Name: root Directory: /root Shell: /bin/bash Last login Thu May 30 10:37 (UTC) on pts/2 No mail. No Plan.
-```

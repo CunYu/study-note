@@ -55,7 +55,7 @@ chmod +x hello.sh
 ./hello.sh
 ```
 
-需要加./告知系统是执行当前文件中的hello.sh脚本，如果不加系统会去PATH路径中寻找。
+需要加./告知系统是执行当前路径下的hello.sh脚本，如果不加系统会去PATH路径中寻找。
 
 如果该脚本在PATH中，例如（/bin，/sbin，/usr/bin，/usr/sbin），是可以直接运行的，不需要加./。
 
@@ -150,8 +150,6 @@ hello
 执行命令取代当前shell。
 
 ``` shell
-[root@8091b99b9eb0 /]# exec /bin/csh
-bash: /bin/csh: No such file or directory
 [root@8091b99b9eb0 /]# exec /bin/sh
 sh-4.2# exec echo "hello"
 hello
