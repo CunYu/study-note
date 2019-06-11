@@ -40,6 +40,7 @@
     * [Spring事务介绍](Spring/Spring事务介绍.md)
     * [Spring Boot启动流程源码分析](Spring/Spring Boot启动流程源码分析.md)
     * [Spring Cloud与微服务简介](Spring/Spring Cloud与微服务简介.md)
+    * [Eureka与服务发现组件简介](Spring/Eureka与服务发现组件简介.md)
 * [Linux](Linux/Linux基本知识.md)
     * [Linux基本知识](Linux/Linux基本知识.md)
     * [Linux用户管理](Linux/Linux用户管理.md)

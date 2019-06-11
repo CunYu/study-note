@@ -58,9 +58,62 @@ Spring Cloud建立在Spring Boot的基础上，每个Spring Cloud版本基于Spr
 
 * Spring Boot CLI
 
-##### 手动搭建
+##### 手动搭建参考
 
-可参考[https://github.com/CunYu/template/tree/master/spring-cloud-template](https://github.com/CunYu/template/tree/master/spring-cloud-template)
+* build.gradle
+
+``` groovy
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.5.RELEASE")
+    }
+}
+
+allprojects {
+
+    apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        compile("org.springframework.boot:spring-boot-starter-web")
+    }
+
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.cloud:spring-cloud-dependencies:Finchley.SR2"
+        }
+    }
+}
+```
+
+* 启动类
+
+``` java
+@SpringBootApplication
+public class SpringCloudTemplateApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(SpringCloudTemplateApplication.class, args);
+    }
+}
+```
+
+* application.yml
+
+``` yml
+server:
+  port: 8080
+```
+
+[https://github.com/CunYu/template/tree/master/spring-cloud-template](https://github.com/CunYu/template/tree/master/spring-cloud-template)
 
 ##### Spring Cloud RestTemplate Demo
 
