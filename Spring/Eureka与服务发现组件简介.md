@@ -48,10 +48,10 @@ compile("org.springframework.cloud:spring-cloud-starter-netflix-eureka-server")
 ``` java
 @EnableEurekaServer
 @SpringBootApplication
-public class EurekaServerOneApplication {
+public class EurekaServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(EurekaServerOneApplication.class, args);
+        SpringApplication.run(EurekaServerApplication.class, args);
     }
 }
 ```
@@ -93,10 +93,10 @@ compile("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
 @EnableEurekaServer
 @EnableEurekaClient
 @SpringBootApplication
-public class EurekaServerOneApplication {
+public class EurekaServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(EurekaServerOneApplication.class, args);
+        SpringApplication.run(EurekaServerApplication.class, args);
     }
 }
 ```
@@ -117,7 +117,7 @@ eureka:
     prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://localhost:8083/eureka/,http://localhost:8084/eureka/
+      defaultZone: http://root:root@localhost:8083/eureka/,http://root:root@localhost:8084/eureka/
 ---
 spring:
   profiles: eurekaServerTwo
@@ -128,7 +128,7 @@ eureka:
     prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://localhost:8082/eureka/,http://localhost:8084/eureka/
+      defaultZone: http://root:root@localhost:8082/eureka/,http://root:root@localhost:8084/eureka/
 ---
 spring:
   profiles: eurekaServerThree
@@ -139,7 +139,7 @@ eureka:
     prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://localhost:8082/eureka/,http://localhost:8083/eureka/
+      defaultZone: http://root:root@localhost:8082/eureka/,http://root:root@localhost:8083/eureka/
 ```
 
 ###### 说明
