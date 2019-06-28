@@ -10,7 +10,7 @@ Ribbon是Netflix发布的负载均衡器，其可以基于负载均衡算法在�
 
 在Spring Cloud中，Ribbon和Eureka配置使用时，Ribbon会自动从Eureka中获取服务实例列表，然后基于负载均衡算法选择一个服务实例。
 
-### Spring Cloud整合Eureka,Ribbon
+### Spring Cloud整合Eureka，Ribbon
 
 ##### Ribbon Spring Cloud依赖包
 
@@ -67,7 +67,7 @@ LoadBalancerClient的choose方法可以更直接的查看Ribbon所选择的服�
 
 ##### Ribbon配置
 
-* java示例
+* java配置
 
 ``` java
 @Configuration
@@ -88,11 +88,13 @@ public class EurekaProviderRibbonClient {
 }
 ```
 
-EurekaProviderRibbonConfig配置类不应该被启动类的@ComponentScan扫描到，如果被扫描到，该配置类会被所有Ribbon Client共享。
+Ribbon配置类不应该被启动类的@ComponentScan扫描到，如果被扫描到，该配置类会被所有Ribbon Client共享。
 
 @RibbonClients(defaultConfiguration = EurekaRibbonClientConfiguration.class)为所有Ribbon Client提供默认配置。
 
-* 属性
+* 属性配置
+
+配置单独的Ribbon客户端
 
 ``` yml
 eurekaProvider:
@@ -100,12 +102,20 @@ eurekaProvider:
     NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
 ```
 
-为所有Ribbon Client添加配置
+配置所有的Ribbon客户端
 
 ``` yml
 ribbon:
   NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule
 ```
+
+Ribbon可以通过配置listOfServers来指定服务实例列表。
+
+属性配置的优先级高于java配置，而且使用起来相对方便，建议使用属性配置。
+
+##### 参考
+
+[https://github.com/CunYu/spring-cloud-demo/tree/master/eureka-ribbon-consumer](https://github.com/CunYu/spring-cloud-demo/tree/master/eureka-ribbon-consumer)
 
 ### 脱离Eureka使用Ribbon
 
