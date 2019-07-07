@@ -18,6 +18,8 @@ Ribbon是Netflix发布的负载均衡器，其可以基于负载均衡算法在�
 compile("org.springframework.cloud:spring-cloud-starter-netflix-ribbon")
 ```
 
+Feign依赖包中已包含了其所需的Ribbon依赖。
+
 ##### RestTemplate配置Ribbon负载均衡
 
 ``` java
