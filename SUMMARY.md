@@ -19,6 +19,7 @@
     * [Java-多线程基础](Java/Java-多线程基础.md)
     * [Java-线程间通信](Java/Java-线程间通信.md)
     * [Java-锁](Java/Java-锁.md)
+    * [Java-队列同步器](Java/Java-队列同步器.md)
 * [JavaWeb](JavaWeb/Java-Servlet基本知识.md)
     * [Java-Servlet基本知识](JavaWeb/Java-Servlet基本知识.md)
     * [Java-Listener和Filter基本知识](JavaWeb/Java-Listener和Filter基本知识.md)
