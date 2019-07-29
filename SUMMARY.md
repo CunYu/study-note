@@ -21,6 +21,7 @@
     * [Java-线程间通信](Java/Java-线程间通信.md)
     * [Java-锁](Java/Java-锁.md)
     * [Java-队列同步器](Java/Java-队列同步器.md)
+    * [Java-原子操作类](Java/Java-原子操作类.md)
     * [Java-Fork-Join框架](Java/Java-Fork-Join框架.md)
     * [Java-Executor框架](Java/Java-Executor框架.md)
     * [Java-线程池](Java/Java-线程池.md)
