@@ -1,12 +1,14 @@
-本文介绍了Java IO相关知识。内容仅供参考使用，有不足之处请及时指出，也欢迎大家交流探讨。
+本文介绍了Java IO基本知识。内容仅供参考使用，有不足之处请及时指出，也欢迎大家交流探讨。
 
 ### Java IO 概述
 
-Java IO指的是Java的输入和输出，这里包含各个方面的输入输出，例如控制台，文件，网络，内存等。
+Java IO指的是Java程序的输入和输出，这里是指各个方面的输入输出，例如控制台，文件，网络，内存等。
+
+Java IO是阻塞式的。
 
 ### 主要API
 
-|类名|功能|
+|类名|说明|
 |:----|:----|
 |File|文件类|
 |InputStream|字节输入流|
@@ -14,6 +16,7 @@ Java IO指的是Java的输入和输出，这里包含各个方面的输入输出
 |Reader|字符输入流|
 |Writer|字符输出流|
 |RandomAccessFile|可随意操作文件类|
+|Socket|网络输入输出类|
 
 ### 字节和字符
 
@@ -165,4 +168,35 @@ System.out.println(new String(content));
 
 ```
 Hello World!
+```
+
+### Socket
+
+Socket可以在不同设备之间通过网络来进行输入输出操作。
+
+Demo
+
+* 服务端
+
+``` java
+ServerSocket serverSocket = new ServerSocket(8888);
+while (true) {
+    Socket socket = serverSocket.accept();
+    DataInputStream dataInputStream = new DataInputStream(socket.getInputStream());
+    System.out.println(dataInputStream.readUTF());
+    DataOutputStream dataOutputStream = new DataOutputStream(socket.getOutputStream());
+    dataOutputStream.writeUTF("你好");
+    socket.close();
+}
+```
+
+* 客户端
+
+``` java
+Socket socket = new Socket("localhost", 8888);
+DataOutputStream dataOutputStream = new DataOutputStream(socket.getOutputStream());
+dataOutputStream.writeUTF("你好");
+DataInputStream dataInputStream = new DataInputStream(socket.getInputStream());
+System.out.println(dataInputStream.readUTF());
+socket.close();
 ```
