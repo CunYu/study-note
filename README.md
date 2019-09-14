@@ -2,9 +2,15 @@
 
 村雨个人学习笔记
 
-### GitBook
+### 阅读
 
 [跳转](https://cunyu.github.io/)
+
+### 说明
+
+本项目内容仅供参考使用，有不足错误之处请及时指出。
+
+[联系我](/contact.md)
 
 ### License
 
