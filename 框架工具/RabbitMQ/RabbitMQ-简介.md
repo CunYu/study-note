@@ -4,7 +4,7 @@ RabbitMQ是一个实现AMQP的消息中间件，其服务器端使用Erlang语�
 
 ### RabbitMQ 流程图
 
-<img src="./image/RabbitMQ流程图.png" alt="RabbitMQ流程图"/>
+<img src="./框架工具/RabbitMQ/image/RabbitMQ流程图.png" alt="RabbitMQ流程图"/>
 
 Exchange和Queue存在于服务端上，Producer和Consumer分别存在于客户端上。
 

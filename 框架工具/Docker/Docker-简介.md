@@ -4,7 +4,7 @@ Docker是一个开源的容器管理平台，采用了C/S模式。
 
 ### Docker 结构简图
 
-<img src="./image/Docker结构简图.png" alt="Docker结构简图"/>
+<img src="./框架工具/Docker/image/Docker结构简图.png" alt="Docker结构简图"/>
 
 ##### Docker Client
 

@@ -6,7 +6,7 @@ Spring框架包含很多的模块，你可以根据需要选择合适的模块�
 
 ### Spring 4.x 框架结构图
 
-<img src="./image/Spring4.x框架结构图.png" alt="Spring4.x框架结构图"/>
+<img src="./Spring/Spring框架/image/Spring4.x框架结构图.png" alt="Spring4.x框架结构图"/>
 
 ### Spring Container
 

@@ -53,7 +53,7 @@ Buffer是与Channel交互的缓存区。
 |limit|边界位置|
 |capacity|容量|
 
-<img src="./image/NIO-Buffer结构.png" alt="NIO-Buffer结构"/>
+<img src="./Java/Java进阶/image/NIO-Buffer结构.png" alt="NIO-Buffer结构"/>
 
 ##### Selector
 

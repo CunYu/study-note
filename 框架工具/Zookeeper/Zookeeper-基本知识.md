@@ -12,7 +12,7 @@ Zookeeper是一个分布式调度服务，其是Google的Chubby项目的开源�
 
 ### Zookeeper结构
 
-<img src="./image/Zookeeper结构.png" alt="Zookeeper结构"/>
+<img src="./框架工具/Zookeeper/image/Zookeeper结构.png" alt="Zookeeper结构"/>
 
 |名字|说明|
 |:----|:----|
@@ -26,7 +26,7 @@ Zookeeper是一个分布式调度服务，其是Google的Chubby项目的开源�
 
 Zookeeper维护一个具有层次结构（树）的数据结构，其中的每个节点称为Znode。
 
-<img src="./image/Zookeeper数据模型.png" alt="Zookeeper数据模型"/>
+<img src="./框架工具/Zookeeper/image/Zookeeper数据模型.png" alt="Zookeeper数据模型"/>
 
 |节点|说明|
 |:----|:----|

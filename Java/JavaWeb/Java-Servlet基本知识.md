@@ -20,7 +20,7 @@ Fast CGI已解决了CGI性能上的不足，现在应用CGI技术的应用还是
 
 Servlet需要运行在Servlet容器中，Servlet容器处理Http请求流程如下。
 
-<img src="./image/Servlet容器处理Http请求流程.png" alt="Servlet容器处理Http请求流程"/>
+<img src="./Java/JavaWeb/image/Servlet容器处理Http请求流程.png" alt="Servlet容器处理Http请求流程"/>
 
 ### Servlet生命周期
 

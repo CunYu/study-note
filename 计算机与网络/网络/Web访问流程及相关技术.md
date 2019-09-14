@@ -16,7 +16,7 @@ HTTP协议采用无状态短连接的通信方式，使得通信连接在传送�
 
 ### 访问流程
 
-<img src="./image/Web访问流程.png" alt="Web访问流程"/>
+<img src="./计算机与网络/网络/image/Web访问流程.png" alt="Web访问流程"/>
 
 ### HTTP请求
 
