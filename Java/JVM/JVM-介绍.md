@@ -2,7 +2,7 @@
 
 JVM是Java Virtual Machine的缩写，也就是java虚拟机的意思。JVM是一种规范，其作用是将字节码解释为相应的机器指令执行及对程序所需资源的管理和优化。
 
-<img src="/Java/JVM/image/JVM位置.png" alt="JVM位置"/>
+<img src="./image/JVM位置.png" alt="JVM位置"/>
 
 ### JVM 知名实现
 
@@ -38,7 +38,7 @@ JRE是Java运行的最小环境。
 
 ### JVM 组成
 
-<img src="/Java/JVM/image/JVM组成.png" alt="JVM组成"/>
+<img src="./image/JVM组成.png" alt="JVM组成"/>
 
 ##### 类加载器
 

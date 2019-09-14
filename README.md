@@ -4,13 +4,13 @@
 
 ### 阅读
 
-[跳转](https://cunyu.github.io/)
+[跳转](https://cunyu.github.io/study-note/)
 
 ### 说明
 
 本项目内容仅供参考使用，有不足错误之处请及时指出。
 
-[联系我](/contact.md)
+[联系我](./contact.md)
 
 ### License
 

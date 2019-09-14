@@ -24,7 +24,7 @@ Future接口及实现Future的类。
 
 ### Executor成员
 
-<img src="/Java/Java多线程/image/Executor框架成员结构图.png" alt="Executor框架成员结构图"/>
+<img src="./image/Executor框架成员结构图.png" alt="Executor框架成员结构图"/>
 
 ##### Runnable和Callable
 

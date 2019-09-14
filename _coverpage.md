@@ -1,4 +1,4 @@
-<img src="/村雨.jpg" alt="村雨" width="100px" height="100px"/>
+<img src="./村雨.jpg" alt="村雨" width="100px" height="100px"/>
 
 # <b>CunYu-StudyNote</b>
 
@@ -11,5 +11,5 @@
 ### 本人为一名技术爱好者，欢迎志同道合的伙伴和我交流探讨，共同学习，进步。
 
 [项目地址](https://github.com/CunYu/study-note)
-[联系我](/contact.md)
+[联系我](./contact.md)
 [开始阅读](#Java)

@@ -4,7 +4,7 @@ Java容器是用来存储和管理对象，其弥补了数组的不足之处。
 
 ### List容器相关类图
 
-<img src="/Java/Java进阶/image/Java-List相关类图.png" alt="Java-List相关类图"/>
+<img src="./image/Java-List相关类图.png" alt="Java-List相关类图"/>
 
 ##### Collection
 
