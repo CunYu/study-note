@@ -144,14 +144,13 @@ age:年龄
 ``` java
 src
 -- main
----- src
------- java
--------- MessageRecord.java
--------- MessageRecordProcessor.java
------- resources
--------- META-INF
----------- services
------------- javax.annotation.processing.Processor
+---- java
+------ MessageRecord.java
+------ MessageRecordProcessor.java
+---- resources
+------ META-INF
+-------- services
+---------- javax.annotation.processing.Processor
 build.gradle
 ```
 
@@ -236,14 +235,13 @@ apply plugin: 'java'
 
 在项目下根目录下执行gradle build命令，在生成的文件中可以找到一个jar包，该jar包即为自定义注解处理器。
 
-验证自定义注解处理器项目结构
+验证自定义注解处理器项目结构（xxx.jar为上述所说的自定义注解处理器）
 
 ``` text
 src
 -- main
----- src
------- java
--------- Person.java
+---- java
+------ Person.java
 libs
 -- xxx.jar
 build.gradle
