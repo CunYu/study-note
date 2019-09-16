@@ -4,12 +4,12 @@
 
 |基本类型|包装类|字节数|
 |:----|:----|:----|
-|byte|Byte|1|
 |short|Short|2|
 |int|Integer|4|
 |long|Long|8|
 |float|Float|4|
 |double|Double|8|
+|byte|Byte|1|
 |char|Character|2|
 |boolean|Boolean|1|
 
@@ -97,12 +97,12 @@ private static class IntegerCache {
 
 |包装类|默认缓存|上限值是否可以设置|
 |:----|:----|:----|
-|Byte|[-128, 127]|N|
 |Short|[-128, 127]|N|
 |Integer|[-128, 127]|Y|
 |Long|[-128, 127]|N|
 |Float|-|-|
 |Double|-|-|
+|Byte|[-128, 127]|N|
 |Character|[0, 127]|N|
 |Boolean|false, true|N|
 
