@@ -4,7 +4,7 @@ Tomcat是Apache下的一个Web应用服务器，其本身是一个Servlet容器�
 
 ### Tomcat架构图
 
-<img src="./Java/JavaWeb/image/Tomcat架构.png" alt="Tomcat架构.png"/>
+<img src="./Java/JavaWeb/image/Tomcat架构.png" alt="Tomcat架构"/>
 
 ### 组件
 
