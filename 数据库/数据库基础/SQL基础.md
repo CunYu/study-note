@@ -48,7 +48,7 @@ INSERT INTO student (student_no, student_name, student_age, student_sex) VALUES 
 
 ``` sql
 INSERT INTO student_new (student_no, student_name, student_age, student_sex)
-	SELECT student_no, student_name, student_age, student_sex FROM student;
+    SELECT student_no, student_name, student_age, student_sex FROM student;
 ```
 
 将查询到的数据插入student表中，列名称不一样也可以，数据匹配即可。
