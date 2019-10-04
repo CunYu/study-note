@@ -1,23 +1,3 @@
-### 容器
-
-Java容器是用来存储和管理对象，其弥补了数组的不足之处。
-
-### List容器相关类图
-
-<img src="./Java/Java进阶/image/Java-List相关类图.png" alt="Java-List相关类图"/>
-
-##### Collection
-
-集合基础接口，其代表一组对象，对象在Collection中被称为Element。
-
-##### List
-
-有序集合。
-
-##### Queue
-
-队列集合。
-
 ### ArrayList
 
 ArrayList本质是一个长度可变的数组。
@@ -33,6 +13,8 @@ transient Object[] elementData;
 
 private static final Object[] DEFAULTCAPACITY_EMPTY_ELEMENTDATA = {};
 ```
+
+ArrayList在初始化时便会构建一个长度为0的数组。
 
 * ArrayList添加元素部分源码
 
@@ -91,6 +73,8 @@ private static final int MAX_ARRAY_SIZE = Integer.MAX_VALUE - 8;
 ```
 
 每当往ArrayList添加元素时，其会判断数组当前容量是否可以存储下，如果存储不下则对数组进行扩容，扩容后将原数组复制到扩容后的新数组中，然后将添加的元素添加到新数组中。
+
+ArrayList扩容后的容量为扩容前容量的1.5倍（除空数组第一次添加元素外）。
 
 ArrayList受int影响，长度有最大限制。
 
@@ -250,6 +234,8 @@ protected int elementCount;
 ```
 
 每当往Vector添加元素时，其会判断数组当前容量是否可以存储下，如果存储不下则对数组进行扩容，扩容后将原数组复制到扩容后的新数组中，然后将添加的元素添加到新数组中。
+
+Vector扩容后的容量默认为扩容前容量的2倍。
 
 Vector受int影响，长度有最大限制。
 
