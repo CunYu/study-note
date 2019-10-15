@@ -8,7 +8,7 @@
 
 * [JavaWeb](./Java/JavaWeb/Java-Servlet基本知识.md)
 
-* [JVM](./Java/JVM/JVM-介绍.md)
+* [JVM](./Java/JVM/JVM-简介.md)
 
 ### Spring
 
