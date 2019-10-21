@@ -4,8 +4,6 @@
 
 * [Java-代理模式应用](./Java/Java进阶/Java-代理模式应用.md)
 
-* [Java-类加载器](./Java/Java进阶/Java-类加载器.md)
-
 * [Java-反射](./Java/Java进阶/Java-反射.md)
 
 * [Java-IO简介](./Java/Java进阶/Java-IO简介.md)
