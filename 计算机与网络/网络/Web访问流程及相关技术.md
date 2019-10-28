@@ -18,107 +18,15 @@ HTTP协议采用无状态短连接的通信方式，使得通信连接在传送�
 
 <img src="./计算机与网络/网络/image/Web访问流程.png" alt="Web访问流程"/>
 
-### HTTP请求
+##### URI
 
-一个HTTP请求的过程实际就是建立一个Socket通信的过程。
-
-HTTP默认端口是80。
+URI（Uniform Resource Identifier）统一资源标识符，其用来标识一个资源，URL是URI的一个子集。
 
 ##### URL
 
 URL（Uniform Resource Locators）统一资源定位器，我们通过URL在互联网中获取资源和提供服务。
 
-##### HTTP格式
-
-###### 请求格式
-
-HTTP请求信息包含4个部分，请求行，请求头，空行，请求数据。
-
-<table>
-	<tr>
-    	<td>请求方法 URL 协议版本</td>
-        <td>请求行</td>
-    </tr>
-    <tr>
-    	<td>头部字段名 值</td>
-        <td rowspan = '3'>请求头</td>
-    </tr>
-    <tr>
-    	<td>头部字段名 值</td>
-    </tr>
-    <tr>
-    	<td>... ...</td>
-    </tr>
-    <tr>
-    	<td colspan = '2'>空行</td>
-    </tr>
-    <tr>
-    	<td colspan = '2'>请求数据</td>
-    </tr>
-</table>
-
-###### HTTP常见请求头部字段名
-
-|头部字段名|说明|
-|:----|:----|
-|Accept-Charset|客户端接收的字符集|
-|Accept-Encoding|可接收的内容编码|
-|Accept-Language|可接受语言|
-|Host|主机和端口号|
-|User-Agent|操作系统，浏览器等信息|
-|Connection|连接状态 HTTP1.1默认为Keep-Alive|
-
-###### 响应格式
-
-响应格式包括4个部分，状态行，响应头，空行，响应数据。
-
-<table>
-	<tr>
-    	<td>协议版本 状态码 状态码说明</td>
-        <td>状态行</td>
-    </tr>
-    <tr>
-    	<td>头部字段名 值</td>
-        <td rowspan = '3'>响应头</td>
-    </tr>
-    <tr>
-    	<td>头部字段名 值</td>
-    </tr>
-    <tr>
-    	<td>... ...</td>
-    </tr>
-    <tr>
-    	<td colspan = '2'>空行</td>
-    </tr>
-    <tr>
-    	<td colspan = '2'>响应数据</td>
-    </tr>
-</table>
-
-###### HTTP常见响应头部字段名
-
-|头部字段名|说明|
-|:----|:----|
-|Server|服务器名称|
-|Content-Type|响应数据格式|
-|Content-Encoding|响应数据编码|
-|Content-Language|响应数据语言|
-|Content-Length|响应数据长度，以字节为单位的十进制个数|
-|Keep-Alive|保持连接时间|
-
-###### HTTP常见状态码
-
-|状态码|说明|
-|:----|:----|
-|200|成功|
-|302|重定向至Location指定的URL|
-|400|请求语法错误，服务端解析失败|
-|403|服务端收到请求但拒绝提供服务|
-|404|请求的资源不存在|
-|500|服务端发生不可预期的错误|
-|503|服务端当前不能处理客户端的请求，过段时间服务端可能恢复正常|
-
-##### 浏览器缓存机制
+### 浏览器缓存
 
 为了减少不必要的请求以提升效率并减少服务端的压力，浏览器有缓存功能，其会将一些信息数据缓存在浏览器中。
 
