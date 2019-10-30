@@ -38,27 +38,27 @@ HotSpot使用的是主动式中断，但是如果线程无法执行到安全点�
 
 Serial收集器时最基本，最古老的收集器，其是单线程的而且在GC时必须暂停其他所有线程。
 
-Serial收集器作用在新生代，Serial Old收集器是Serial收集器的老年代版本。
+Serial收集器作用在青年代，Serial Old收集器是Serial收集器的老年代版本。
 
 Serial收集器是串行的，采用标记复制算法，Serial Old 收集器是串行的，采用标记整理算法。
 
-Serial收集器是虚拟机运行在Client模式下的默认新生代收集器，在单CPU环境下，其GC效率最高。
+Serial收集器是虚拟机运行在Client模式下的默认青年代收集器，在单CPU环境下，其GC效率最高。
 
 * ParNew 收集器
 
 ParNew收集器是Serial收集器的多线程版本。
 
-ParNew收集器作用在新生代。
+ParNew收集器作用在青年代。
 
 ParNew收集器是并行的，采用标记复制算法。
 
-ParNew收集器是很多虚拟机运行在Server模式下的首选新生代收集器，其可以和CMS收集器配合工作。
+ParNew收集器是很多虚拟机运行在Server模式下的首选青年代收集器，其可以和CMS收集器配合工作。
 
 * Parallel Scavenge/Parallel Old 收集器
 
 Parallel Scavenge收集器是一个注重吞吐量的收集器，吞吐量是指运行应用程序时间和运行应用程序时间加上垃圾收集时间的比值。
 
-Parallel Scavenge收集器作用在新生代，Parallel Old收集器是Parallel Scavenge收集器的老年代版本。
+Parallel Scavenge收集器作用在青年代，Parallel Old收集器是Parallel Scavenge收集器的老年代版本。
 
 Parallel Scavenge收集器是并行的，采用标记复制算法，Parallel Old 收集器是并行的，采用标记整理算法。
 
@@ -68,7 +68,7 @@ Parallel Scavenge收集器是并行的，采用标记复制算法，Parallel Old
 
 CMS收集器是一个注重GC停顿时间的收集器。
 
-CMS收集器作用在新生代。
+CMS收集器作用在青年代。
 
 CMS收集器是并行的，采用标记清除算法。
 
@@ -76,6 +76,6 @@ CMS收集器是并行的，采用标记清除算法。
 
 G1收集器是当前收集器技术发展最前沿的成果之一，其兼顾吞吐量和GC停顿时间。
 
-G1收集器可以作用于新生代和老年代。
+G1收集器可以作用于青年代和老年代。
 
 G1收集器是并行的，采用标记整理算法。
