@@ -1,12 +1,6 @@
 ### POI简介
 
-* 官方说明
-
-> Apache POI - the Java API for Microsoft Documents
-
-* 百度百科
-
-> Apache POI是Apache软件基金会的开放源码函式库，POI提供API给Java程序对Microsoft Office格式档案读和写的功能。
+POI是一个操作微软Office文档的Java软件工具包，其归属于Apache。
 
 ### POI(Excel)  结构
 
