@@ -36,6 +36,8 @@
 
 * [MySQL](./数据库/MySQL/MySQL简介.md)
 
+* [MyBatis](./数据库/MyBatis/MyBatis简介.md)
+
 ### 架构设计
 
 * [设计模式](./架构设计/设计模式/23种常见设计模式汇总.md)

@@ -1,6 +1,6 @@
 ### POI简介
 
-POI是一个操作微软Office文档的Java软件工具包，其归属于Apache。
+POI是一个操作微软Office文档的Java工具包，其归属于Apache。
 
 ### POI(Excel)  结构
 
