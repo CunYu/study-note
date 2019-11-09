@@ -68,7 +68,7 @@ Parallel Scavenge收集器是并行的，采用标记复制算法，Parallel Old
 
 CMS收集器是一个注重GC停顿时间的收集器。
 
-CMS收集器作用在青年代。
+CMS收集器作用在老年代。
 
 CMS收集器是并行的，采用标记清除算法。
 
