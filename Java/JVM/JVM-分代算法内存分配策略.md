@@ -12,7 +12,7 @@
 
 * Major GC/Full GC
 
-老年代垃圾回收行为，其效率要比Minor GC慢很多。
+老年代垃圾回收行为，其效率要比Minor GC慢很多，因为Major GC经常伴随着Minor GC，所以Major GC等价于Full GC，Full GC是指这个堆的回收行为。
 
 ### 堆内存分配
 
