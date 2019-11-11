@@ -6,7 +6,7 @@ Servlet是运行在服务端处理Http请求的程序。
 
 * Servlet性能更好
 
-CGI（Common Gateway Interface）公共网管接口需要为每个请求创建一个进程来运行相应的处理程序，资源开销较大。Servlet只需启动JVM加载运行相应的程序即可，只有一个进程，资源开销相对较小。
+CGI（Common Gateway Interface）公共网关接口需要为每个请求创建一个进程来运行相应的处理程序，资源开销较大。Servlet只需启动JVM加载运行相应的程序即可，只有一个进程，资源开销相对较小。
 
 * Servlet使用更方便
 
