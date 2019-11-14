@@ -14,7 +14,7 @@ Connector是Tomcat中的连接器，其处理外界的请求并封装为对象�
 
 * apr
 
-Apache Portable Runtime，Apache可移植运行时库，其以JNI的形式调用Apache HTTP服务器的核心动态链接库来处理文件读取和网络传输操作，进而极大的提高了静态文件的处理性能。
+Apache Portable Runtime，Apache可移植运行时库，其以JNI的形式调用Apache HTTP服务器的核心动态链接库来处理文件读取和网络传输操作，进而极大的提高了静态文件的处理能力。
 
 apr是从操作系统的维度来解决异步IO问题，极大的提高了性能，其是Tomcat处理高并发应用的首选模式。
 
@@ -316,7 +316,7 @@ public void run() {
 }
 ```
 
-Poller分装了Selector，其通过Selector监听注册到其的组件，一旦发生相应的事件，则调用processKey方法处理。
+Poller封装了Selector，其通过Selector监听注册到其的组件，一旦发生相应的事件，则调用processKey方法处理。
 
 ``` java
 protected void processKey(SelectionKey sk, NioSocketWrapper socketWrapper) {
