@@ -52,7 +52,7 @@
 
 * [Gradle](./框架工具/Gradle/Gradle-简介.md)
 
-* [RabbitMQ](./框架工具/RabbitMQ/RabbitMQ-简介.md)
+* [RabbitMQ](./框架工具/RabbitMQ/RabbitMQ简介.md)
 
 * [Zookeeper](./框架工具/Zookeeper/Zookeeper-基本知识.md)
 
