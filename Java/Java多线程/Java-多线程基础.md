@@ -70,6 +70,25 @@ thread.start();
 
 线程创建时，为方便管理，可通过传参对线程命名。
 
+##### 实现Callable
+
+``` java
+public class Job implements Callable<String> {
+
+    @Override
+    public String call() {
+        return "Hello World!";
+    }
+}
+```
+
+``` java
+FutureTask<String> futureTask = new FutureTask<>(new Job());
+Thread thread = new Thread(futureTask);
+thread.start();
+System.out.println(futureTask.get());
+```
+
 ### 线程状态
 
 |线程状态|说明|

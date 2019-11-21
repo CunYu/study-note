@@ -4,6 +4,8 @@
 
 * [Linux例行任务管理](./计算机与网络/Linux/Linux例行任务管理.md)
 
+* [Linux句柄](./计算机与网络/Linux/Linux句柄.md)
+
 * [Shell简介](./计算机与网络/Linux/Shell简介.md)
 
 * [Shell编程-变量](./计算机与网络/Linux/Shell编程-变量.md)
