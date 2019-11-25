@@ -40,6 +40,8 @@ wait方法会释放锁，而notify方法不会释放锁。
 
 wait，notify，notifyAll只能在同步代码块中使用。
 
+wait存在虚假唤醒的问题，也就是没有通过方法去唤醒wait，其会自己唤醒，所以使用时，要做虚假判断，如果唤醒条件不满足，则一直wait。
+
 ``` java
 public class Wait implements Runnable {
 
