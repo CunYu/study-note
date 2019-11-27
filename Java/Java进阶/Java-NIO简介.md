@@ -29,6 +29,8 @@ Channel是双向的。
 |SocketChannel|使用TCP协议传输的网络数据Channel|
 |ServerSocketChannel|ServerSocket Channel，监听TCP端口，每收到连接都会创建一个SocketChannel|
 
+FileChannel只能为阻塞模式。
+
 ##### Buffer
 
 Buffer是与Channel交互的缓存区。
@@ -57,7 +59,7 @@ Buffer是与Channel交互的缓存区。
 
 ##### Selector
 
-Selector是用来监听各个Channel的状态的。
+Selector是用来监听各个Channel状态的，其只能接受非阻塞Channel的注册。
 
 * Selector监听事件
 
