@@ -6,4 +6,6 @@
 
 * [Spring事务介绍](./Spring/Spring框架/Spring事务介绍.md)
 
+* [Spring循环依赖](./Spring/Spring框架/Spring循环依赖.md)
+
 * [SpringBoot启动流程源码分析](./Spring/Spring框架/SpringBoot启动流程源码分析.md)
