@@ -46,13 +46,21 @@
 
 * 运行期
 
-### Spring AOP
+### Spring AOP管理
 
-Spring AOP只能对方法进行切面，也就是Spring AOP的连接点都是方法。如想对构造器或属性进行切面，请使用AspectJ。
+Spring AOP中代理对象由Spring容器统一管理。
 
-Spring AOP中代理由Spring容器统一管理。
+Spring AOP中使用动态代理和cglib代理分别代理接口和类，cglib是通过继承目标类的方式来创建代理，所以其不能代理final修饰的目标类。
 
-Spring AOP中使用动态代理和cglib代理分别代理接口和类。
+### Spring AOP和AspectJ区别
+
+Spring AOP只能对方法进行切面，也就是Spring AOP的连接点都是方法。AspectJ即可以对方法进行切面，也可以对构造器和属性进行切面。
+
+Spring AOP是通过代理对目标对象方法增强的方式实现的，其发生在运行期间。
+
+AspectJ是通过操作字节码来实现的，其发生在编译期间。
+
+AspectJ的性能要比Spring AOP高。
 
 ### Spring AOP实现
 
