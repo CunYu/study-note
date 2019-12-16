@@ -36,9 +36,9 @@
 
 * [MySQL](./数据库/MySQL/MySQL简介.md)
 
-* [MyBatis](./数据库/MyBatis/MyBatis简介.md)
-
 * [Redis](./数据库/Redis/Redis-简介.md)
+
+* [MyBatis](./数据库/MyBatis/MyBatis简介.md)
 
 ### 架构设计
 
