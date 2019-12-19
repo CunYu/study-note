@@ -24,9 +24,33 @@ Java线程池是实际使用时比较常见的并发框架，其维护了多个�
 
 线程池会将线程封装成Worker，Worker执行完当前任务后，会去BlockingQueue中获取新的任务执行。
 
+### 线程池状态
+
+* RUNNING
+
+运行状态。
+
+* SHUTDOWN
+
+不接受外部任务。
+
+* STOP
+
+不接受外部任务，不处理任务，正在处理的任务会被中断。
+
+* TIDYING
+
+所有任务都销毁后，线程池变为该状态，然后会调用terminated方法，调用完毕后会将线程池状态变为TERMINATED。
+
+* TERMINATED
+
+线程池终止。
+
 ### 线程池使用
 
 线程池创建方式有两种，一种是自定义线程池，一种是通过Executors的静态方法来创建。
+
+线程池提交任务有两个方法，execute和submit，execute只能提交Runnable任务，submit可以提交Runnable和Callable任务。
 
 ##### 自定义线程池
 
