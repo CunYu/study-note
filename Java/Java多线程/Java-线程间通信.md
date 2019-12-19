@@ -263,6 +263,12 @@ Join执行结束！
 
 ThreadLocal，线程本地变量，以ThreadLocal对象为键，以对象为值的存储结构。线程之间不共享ThreadLocal存储的值。
 
+##### 原理
+
+线程类有一个ThreadLocalMap的成员变量，ThreadLocalMap是以ThreadLocal为Key，数据实体为value的Map，所以每个线程都有自己的ThreadLocalMap，其不会相互影响，每次存放值时都会获取当前线程的ThreadLocalMap，然后进行相应的操作。
+
+ThreadLoaclMap中的key是弱引用的，为了避免泄漏，当不再使用时，要调用threadLocal.remove方法移除相应的数据实体。
+
 ``` java
 public class Job implements Runnable {
 
