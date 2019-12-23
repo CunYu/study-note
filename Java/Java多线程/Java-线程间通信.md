@@ -28,7 +28,7 @@ synchronized重量级锁，但自从Java SE 1.6起，对其进行了一定的优
 
 synchronized可以使其所修饰的内容以同步的方式执行，其保证了其所修饰的内容同一时刻只能被同一个线程访问。
 
-synchronized本质上是对对象的监视器（monitor）进行获取，同一时刻只能有一个线程获取，每个对象都有自己的monitor，同步代码块或同步方法执行时必须先获得monitor，没有获得monitor的会在同步块或同步方法的入口处阻塞，monitorenter和monitorexit指令实现了monitor的获取和释放，monitor存在于对象头中。
+synchronized本质上是对对象的监视器（monitor）进行获取，同一时刻只能有一个线程获取，每个对象都有自己的monitor，同步代码块或同步方法执行时必须先获得monitor，没有获得monitor的会在同步块或同步方法的入口处阻塞，monitorenter和monitorexit指令实现了monitor的获取和释放，monitor对象地址存在于对象头中。
 
 synchronized方法和synchronized(object)是一样的，以对象为锁。
 
