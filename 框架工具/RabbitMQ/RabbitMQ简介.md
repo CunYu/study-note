@@ -110,6 +110,12 @@ DLX（Dead Letter Exchange）,当消息变为死信后，其会被发往到DLX�
 
 * 队列已满
 
+##### 延迟队列
+
+死信队列可以用来实现延迟队列，给消息设置TTL并使其对应的队列无消费者，这样时间到后消息会发往DLX，然后发往相应的队列，这样就实现了消息的延迟。
+
+延迟队列也可以通过插件来实现。
+
 ### Java Demo 地址
 
 [https://github.com/CunYu/rabbitmq-java-demo](https://github.com/CunYu/rabbitmq-java-demo)

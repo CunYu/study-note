@@ -6,6 +6,8 @@
 
 * [Java-线程间通信](./Java/Java多线程/Java-线程间通信.md)
 
+* [Java-Synchronized锁](./Java/Java多线程/Java-Synchronized锁.md)
+
 * [Java-锁](./Java/Java多线程/Java-锁.md)
 
 * [Java-队列同步器](./Java/Java多线程/Java-队列同步器.md)
