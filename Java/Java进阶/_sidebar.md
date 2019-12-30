@@ -1,5 +1,7 @@
 * [Java-泛型](./Java/Java进阶/Java-泛型.md)
 
+* [Java-异常](./Java/Java进阶/Java-异常.md)
+
 * [Java-注解简介](./Java/Java进阶/Java-注解简介.md)
 
 * [Java-代理模式应用](./Java/Java进阶/Java-代理模式应用.md)
