@@ -66,7 +66,7 @@ GenericServlet类是实现了Servlet的抽象类，在Servlet的基础上提供�
 
 ##### 继承HttpServlet类
 
-GenericServlet类是继承了GenericServlet的抽象类，在GenericServlet的基础上进一步封装。
+GenericServlet类是继承了GenericServlet的抽象类，在GenericServlet的基础上进一步封装，其service方法应用了模板方法设计模式。
 
 ### Servlet Demo
 
