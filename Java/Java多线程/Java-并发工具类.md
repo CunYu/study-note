@@ -2,6 +2,8 @@
 
 CountDownLatch用来等待其他线程完成操作，可以实现join的功能，并且比join更加灵活。
 
+CountDownLatch是使用AQS实现的，countDown方法是释放锁，await方法是获取锁。
+
 ##### 示例
 
 ``` java
