@@ -10,4 +10,6 @@
 
 * [SpringMVC简介](./Spring/Spring框架/SpringMVC简介.md)
 
+* [Spring-Resource](./Spring/Spring框架/Spring-Resource.md)
+
 * [SpringBoot启动流程源码分析](./Spring/Spring框架/SpringBoot启动流程源码分析.md)
