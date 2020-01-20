@@ -56,6 +56,8 @@ Servlet容器在初始化Servlet时调用。
 
 Servlet在Servlet容器加载其时调用init方法初始化实例，通过service方法处理相应的Servlet请求，在容器关闭或对应项目移除时，Servlet容器会调用destroy方法将其实例销毁，init方法和destroy方法只会被调用一次。
 
+Servlet默认是单例的，其使用一个Servlet来处理多个请求，所以其不是线程安全的，Servlet可以通过实现SingleThreadModel接口的方式来使其不是单例的，实现SingleThreadModel接口后会为每个请求创建一个Servlet来处理，但是创建Servlet的数量是受限制的。
+
 ### Servlet实现
 
 ##### 实现Servlet接口
