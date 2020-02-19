@@ -5,3 +5,5 @@
 * [MySQL-MVCC](./数据库/MySQL/MySQL-MVCC.md)
 
 * [MySQL-执行计划](./数据库/MySQL/MySQL-执行计划.md)
+
+* [MySQL-常见索引失效情况](./数据库/MySQL/MySQL-常见索引失效情况.md)
