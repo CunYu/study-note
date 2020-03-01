@@ -449,6 +449,8 @@ Condition的出现可以使我们更好的实现线程的等待/唤醒，其比w
 
 Condition可以通过锁来构建，其可以构建多个Condition对象，signal方法只是将对应Condition上的等待的线程唤起。
 
+await和signal方法实现用到了LockSupport的park和unpark方法。
+
 wait，notify相当于只有一个Condition。
 
 示例

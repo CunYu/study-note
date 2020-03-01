@@ -67,3 +67,7 @@ TreeMap使用了红黑树，红黑树的节点为Entry（Entry实现了Map.Entry
 默认情况下会按key的自然顺序升序排序，也可以指定排序器。
 
 TreeMap不允许key和value为null。
+
+### 补充说明
+
+Hash方式的Map使用key的Hash值作为存储位置的判断依据，所以key值是有要求的，作为key值的对象需要保证equal方法相等时，其hash值也一样，一般情况下使用String来作为key。
