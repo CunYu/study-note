@@ -70,4 +70,4 @@ TreeMap不允许key和value为null。
 
 ### 补充说明
 
-Hash方式的Map使用key的Hash值作为存储位置的判断依据，所以key值是有要求的，作为key值的对象需要保证equal方法相等时，其hash值也一样，一般情况下使用String来作为key。
+Hash方式的Map使用key的Hash值作为存储位置的判断依据，所以key值是有要求的，作为key值的对象需要保证equals方法相等时，其hash值也一样，一般情况下使用String来作为key。

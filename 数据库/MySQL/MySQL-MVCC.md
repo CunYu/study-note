@@ -18,6 +18,10 @@ MVCC在隔离级别为读已提交，可重复读时使用。
 
 ### Read View
 
+在隔离级别为读已提交时，事务中的每条SELECT语句都会生成一个Read View。
+
+在隔离级别为可重复读时，事务中只有第一条SELECT语句会生成一个Read View，其他的SELECT语句复用第一条语句生成的Read View。
+
 ##### Read View结构
 
 * trx_ids
