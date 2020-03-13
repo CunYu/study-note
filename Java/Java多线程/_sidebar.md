@@ -4,6 +4,8 @@
 
 * [Java-内存模型](./Java/Java多线程/Java-内存模型.md)
 
+* [JMM-Happens-Before](./Java/Java多线程/JMM-Happens-Before.md)
+
 * [Java-线程间通信](./Java/Java多线程/Java-线程间通信.md)
 
 * [Java-Synchronized锁](./Java/Java多线程/Java-Synchronized锁.md)

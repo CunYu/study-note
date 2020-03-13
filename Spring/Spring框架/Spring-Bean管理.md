@@ -8,7 +8,9 @@ Spring容器负责Bean的创建，装配并管理Bean的整个生命周期。
 
 因为Spring容器是用DI来管理Bean之间的关系，所以Spring容器是IOC容器。
 
-在Spring中，Spring容器不是唯一的，BeanFactory是Spring中最简单的容器，提供了基本的DI支持，我们平时最常使用的是ApplicationContext，其基于BeanFactory构建，并提供应用框架级别的服务支持。
+在Spring中，Spring容器不是唯一的，BeanFactory是Spring中最简单的容器，提供了基本的DI支持，我们平时最常使用的是ApplicationContext，其基于BeanFactory构建，并提供应用框架级别的服务支持，BeanFactory只是一个IOC容器，提供了IOC容器基础的功能，ApplicationContext不光继承了BeanFactory，其还封装了自己的处理，除此之外其还继承了很多其他接口，例如ResourceLoader等，所以其提供的功能更多，BeanFactory不支持AOP，Web等功能。
+
+BeanFactory是惰性加载Bean的，其构建时不会加载Bean，ApplicationFactory是非惰性的，其构建时就会加载所有Bean。
 
 ApplicationContext常见构建方法
 
